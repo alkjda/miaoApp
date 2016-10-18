@@ -1,0 +1,9 @@
+[
+  {"title": "go1", "price":368.00,"desc": "进口天然猫粮 ，深海鱼配方", "imgsrc": "images/go1.jpg"},
+  {"title": "now", "price":398.00,"desc": "进口天然猫粮 ，深海鱼配方", "imgsrc": "images/now.jpg"},
+  {"title": "福摩", "price":568.00,"desc": "进口天然猫粮 ，深海鱼配方", "imgsrc": "images/fumo.jpg"},
+  {"title": "爱肯", "price":668.00,"desc": "进口天然猫粮 ，深海鱼配方", "imgsrc": "images/aiken.jpg"},
+  {"title": "渴望", "price":488.00,"desc": "进口天然猫粮 ，深海鱼配方", "imgsrc": "images/kewang1.jpg"},
+  {"title": "雪山", "price":358.00,"desc": "进口天然猫粮 ，深海鱼配方", "imgsrc": "images/xuesan.jpg"},
+  {"title": "go", "price":465.00,"desc": "进口天然猫粮 ，深海鱼配方", "imgsrc": "images/go.jpg"}
+]

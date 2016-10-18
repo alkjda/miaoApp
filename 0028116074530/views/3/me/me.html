@@ -1,0 +1,114 @@
+<ion-view>
+    <ion-header-bar class="bar-positive" style="background: #d8ccbc;border: none;" >
+        <button ui-sref="3.shang" style="color: #ffffff;font-size: 15px;line-height: 35px;" class="button button-clear ion-reply">返回商城</button>
+        <h1 class="title">我的账号</h1>
+        <!--<ion-nav-buttons>-->
+        <!--<button class="button button-icon ion-ios-cart button-clear"></button>-->
+        <!--</ion-nav-buttons>-->
+        <button class="button button-clear " ui-sref="3.me" ng-click="openModal()">注册</button>
+    </ion-header-bar>
+    <ion-content >
+
+       <!--<div class="list list-inset">-->
+           <!--<form>-->
+            <!--<div class="item item-input">-->
+                <!--&lt;!&ndash;<div class="item item-input item-floating-label">&ndash;&gt;-->
+                <!--<span class="input-label">账号:</span>-->
+                <!--<input type="text" name="pname" placeholder="手机/邮箱/账号" required/>-->
+            <!--</div>-->
+            <!--<div class="item item-input">-->
+                <!--&lt;!&ndash;<div class="item item-input item-stacked-label">&ndash;&gt;-->
+                <!--<span class="input-label">密码:</span>-->
+                <!--<input type="password" name="pname" placeholder="请输入密码" required/>-->
+            <!--</div><br>-->
+            <!--&lt;!&ndash;<button class="button button-full button-assertive" ng-disabled="registerForm.username.$error.required" >登录</button>&ndash;&gt;-->
+                <!--<input type="submit" value="登录"  class="button button-full button-assertive" ng-disabled="shippingForm.pname.$invalid"  >-->
+           <!--</form>-->
+        <!--</div>-->
+        <div class="list list-inset">
+            <div class="item item-input">
+                <div class="input-label">账号:</div>
+                <input type="text" placeholder="手机/邮箱/账号" ng-model="data.text"/>
+            </div>
+            <div class="item item-input">
+                <div class="input-label">密码:</div>
+                <input type="password" placeholder="请输入密码" ng-model="data.password"/>
+            </div>
+            <div class="item item-checkbox">
+                <label class="checkbox checkbox-assertive">
+                    <input type="checkbox" value="记住密码" ng-model="data.checkbox">
+                </label>记住密码
+            </div>
+            <button class="button button-full button-assertive" ng-disabled="!data.text || !data.password"  ng-click="showAlert()" ui-sref="me2">
+                登录
+            </button>
+        </div>
+    </ion-content>
+    <!--内联模板-->
+    <script id="views/3/3.html" type="text/ng-template">
+        <ion-modal-view>
+            <ion-header-bar class="bar-positive" style="background: #d8ccbc;border: none;" >
+                <!--<button ui-sref="3.shang" style="color: #ffffff;font-size: 15px;line-height: 35px;" class="button button-clear ion-reply">返回商城</button>-->
+                <h1 class="title">账号注册</h1>
+                <button class="button button-clear button-primary" ng-click="closeModal()">取消</button>
+            </ion-header-bar>
+            <!--<ion-header-bar class="bar bar-header bar-positive">-->
+                <!--<h1 class="title">新建联系人</h1>-->
+                <!--<button class="button button-clear button-primary" ng-click="closeModal()">取消</button>-->
+            <!--</ion-header-bar>-->
+
+            <ion-content class="padding" id="one">
+                <div class="list">
+                    <label class="item item-input">
+                        <span class="input-label">邮箱:</span>
+                        <input type="email" placeholder="aaa@aaa.com (必填)" ng-model="data.email"  required="required">
+                    </label><br>
+                    <label class="item item-input">
+                        <span class="input-label">用户名:</span>
+                        <input type="text" placeholder="英文开头4-12位数字 (必填)" ng-model="data.tex"  required="required">
+                    </label><br>
+                    <label class="item item-input">
+                        <span class="input-label">密码:</span>
+                        <input type="password" placeholder="不能使用标点符号 (必填)" ng-model="data.passwor"  required="required">
+                    </label><br>
+                    <!--<label class="item item-input">-->
+                        <!--<span class="input-label">确认密码:</span>-->
+                        <!--<input type="password" placeholder="不能使用标点符号 (必填)" ng-model="password2"  required="required">-->
+                    <!--</label><br>-->
+                    <label class="item item-input">
+                        <span class="input-label">身份证号码:</span>
+                        <input type="text" placeholder="必须使用本人身份证 (必填)" required="required" ng-model="data.hao">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">姓名:</span>
+                        <input type="text" required="required" ng-model="data.name">
+                    </label><br>
+                    <div class="item item-divider">性别</div>
+                    <label class="item item-radio">
+                        <input type="radio" name="gender" value="男" checked/>
+                        <div class="radio-content">
+                            <div class="item-content">男</div>
+                            <i class="radio-icon ion-checkmark assertive"></i>
+                        </div>
+                    </label>
+                    <label class="item item-radio">
+                        <input type="radio" name="gender" value="男">
+                        <div class="radio-content">
+                            <div class="item-content">女</div>
+                            <i class="radio-icon ion-checkmark assertive"></i>
+                        </div>
+                    </label>
+                    <div class="item item-toggle">
+                        是否同意本协议
+                        <label class="toggle toggle-assertive">
+                            <input type="checkbox" ng-model="data.yes">
+                            <div class="track"><div class="handle"></div></div>
+                        </label>
+                    </div>
+
+                    <button class="button button-full  button-assertive" ng-disabled="!data.tex || !data.passwor || !data.email ||!data.yes || !data.name || !data.hao" ng-click="zhuce()" >确认注册</button>
+                </div>
+            </ion-content>
+        </ion-modal-view>
+    </script>
+</ion-view>

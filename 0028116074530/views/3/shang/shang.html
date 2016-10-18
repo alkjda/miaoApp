@@ -1,0 +1,26 @@
+<ion-view title="商城">
+    <ion-header-bar class="bar-positive" style="background: #d8ccbc;border: none;" >
+        <a ui-sref="one" style="color: #ffffff;font-size: 15px;line-height: 35px;" class="ion-reply">Home</a>
+        <h1 class="title">商城</h1>
+        <!--<ion-nav-buttons>-->
+        <!--<button class="button button-icon ion-ios-cart button-clear"></button>-->
+        <!--</ion-nav-buttons>-->
+        <button class="button button-clear ion-ios-cart" style="font-size: 25px;margin-right: 15px;" ui-sref="3.shop"></button>
+    </ion-header-bar>
+    <ion-content>
+        <div>
+            <ion-list>
+                <!--<ion-item class="item-avatar item-remove-animate"-->
+                <ion-item class="item item-thumbnail-left "
+                          ng-repeat="product in data.productList"
+                          ng-click="toDetail(product)"  style="position: relative;">
+                    <img ng-src="{{product.imgsrc}}"   />
+                    <h2>{{product.title}}</h2>
+                    <p>商品价格：{{product.price | currency:"RMB ￥"}}</p>
+                    <p>{{product.desc}}</p>
+                    <button id="gou" style="border: none; height: 25px;background-color:#e42112;position: absolute;bottom: 5px;right: 5px;padding:0 5px;border-radius: 5px;line-height: 25px;color:#ffffff;font-size:10px;"> 加入购物车</button>
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>
